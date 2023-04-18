@@ -1,0 +1,14 @@
+node_modules/
+dist/
+examples/
+production/
+build
+testr
+
+.cache
+.vscode
+
+yarn.lock
+package-lock.json
+
+testr.ts

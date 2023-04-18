@@ -1,0 +1,35 @@
+{
+  "name": "least-significant-bit",
+  "version": "1.0.0",
+  "description": "Hide and extract string data in the least-significant bits of an image",
+  "module": "build/index.esm.js",
+  "main": "build/index.js",
+  "scripts": {
+    "docs": "servino -r docs -w docs",
+    "copy": "cp build/index.js docs/lib.js",
+    "build": "rollup -c && npm run copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wutility/least-significant-bit"
+  },
+  "bugs": {
+    "url": "https://github.com/wutility/least-significant-bit/issues"
+  },
+  "homepage": "https://github.com/wutility/least-significant-bit#readme",
+  "author": "Haikel Fazzani",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^3.20.6",
+    "rollup-terser": "^1.0.3",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "servino": "^2.0.9",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "lsb",
+    "least significant bit",
+    "borwser"
+  ]
+}
