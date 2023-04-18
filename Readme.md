@@ -1,6 +1,15 @@
 # Least Significant Bit
+Least significant bit (LSB) insertion is a common and simple method to embed data in an image file.
 
 <hr />  
+
+<div align="center" style="width:100%; text-align:center;">
+  <img src="https://badgen.net/bundlephobia/min/least-significant-bit" alt="least-significant-bit" />
+  <img src="https://badgen.net/bundlephobia/dependency-count/least-significant-bit" alt="least-significant-bit" />
+  <img src="https://badgen.net/npm/v/least-significant-bit" alt="least-significant-bit" />
+  <img src="https://badgen.net/npm/dt/least-significant-bit" alt="least-significant-bit" />
+  <img src="https://data.jsdelivr.com/v1/package/npm/least-significant-bit/badge" alt="least-significant-bit"/>
+</div>
 
 ### [Demo](https://wutility.github.io/least-significant-bit)
 
