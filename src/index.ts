@@ -1,4 +1,4 @@
-export class LSBSteganography {
+export default class Lsb {
   static encode(imageData: ImageData, message: string): ImageData {
     const binaryMessage = this.stringToBinary(message);
     const binaryMessageLength = binaryMessage.length;

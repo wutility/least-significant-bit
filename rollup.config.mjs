@@ -5,7 +5,7 @@ export default {
   input: "src/index.ts",
   output: [
     {
-      name: 'LSBSteganography',
+      name: 'Lsb',
       file: 'build/index.js',
       format: 'umd',
       sourcemap: false

@@ -11,12 +11,12 @@ form.addEventListener('submit', e => {
 
   reader.onload = function (event) {
     const img = new Image();
-    
+
     img.onload = function () {
       ctx.drawImage(img, 0, 0);
       const imageData = ctx.getImageData(0, 0, img.width, img.height);
 
-      LSBSteganography.encode(imageData, text);
+      Lsb.encode(imageData, text);
       ctx.putImageData(imageData, 0, 0);
     }
     img.src = event.target.result;
@@ -26,6 +26,6 @@ form.addEventListener('submit', e => {
 
 document.getElementById('btn-extract').addEventListener('click', () => {
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const decodedMessage = LSBSteganography.decode(imageData);
+  const decodedMessage = Lsb.decode(imageData);
   document.querySelector('pre').textContent = decodedMessage;
 });
