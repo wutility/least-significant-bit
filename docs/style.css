@@ -1,0 +1,56 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: .8fr 3.2fr;
+}
+
+aside {  
+  background-color: #161616;
+}
+
+aside,header, main>div {padding: 15px; overflow: auto;}
+
+canvas {
+  max-width: 100%;
+  letter-spacing: .6px;
+}
+
+button,input,textarea,select {
+  font-size: .85rem;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 7px;
+  padding: 12px 25px;
+  outline: none;
+}
+
+button {
+  border: 0;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+pre {
+  white-space: pre-line;
+  overflow: auto;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.form-control {display: flex; flex-direction: column;}
+.form-control input {margin-top: 10px;}
+
+.mb-1{margin-bottom: 10px;}
+
+.w-100 {width: 100%;}
+
+.d-flex {display: flex;}
+.justify-between {justify-content: space-between;}
+
+.bg-black {background-color: #161616; color: white;}

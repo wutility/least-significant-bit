@@ -1,6 +1,6 @@
 {
   "name": "least-significant-bit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hide and extract string data in the least-significant bits of an image",
   "module": "build/index.esm.js",
   "main": "build/index.js",

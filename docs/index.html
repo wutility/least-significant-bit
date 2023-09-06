@@ -5,21 +5,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>least significant bit</title>
-  <script src="lib.js"></script>
+  <title>Least Significant Bit</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <form>
-    <input type="text" name="text" id="text" placeholder="hello world" required>
-    <input type="file" name="file" id="file" required>
-    <button type="submit">hide</button>
-  </form>
-  
-  <canvas id="canvas"></canvas>
+  <aside class="bg-black">
+    <form class="mb-1">
+      <div class="form-control mb-1">
+        <label for="text">Message</label>
+        <input type="text" name="text" id="text" placeholder="hello world" required>
+      </div>
+      <div class="form-control mb-1">
+        <label for="text">Image</label>
+        <input type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg, image/webp, image/avif"
+          hidden required>
+        <button type="button" id="btn-open-input-file">Image File</button>
+      </div>
+      <button class="w-100" type="submit">hide message</button>
+    </form>
+    <button class="w-100" type="button" id="btn-extract">extract message</button>
+  </aside>
 
-  <button type="button" id="btn-extract">extract</button>
-  <pre></pre>
+  <main>
+    <header class="d-flex justify-between">
+      <pre></pre>
+      <form class="d-flex" id="form-download">
+        <input type="text" name="filename" id="filename" placeholder="myImage" required>
+        <button type="submit">download</button>
+      </form>
+    </header>
+
+    <div>
+      <canvas id="canvas"></canvas>      
+    </div>
+  </main>
+
+  <script src="lib.js"></script>
+  <script src="constants.js"></script>
   <script src="index.js" defer></script>
 </body>
 
