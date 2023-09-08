@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
   line-height: 1.5;
   letter-spacing: .6px;
 }
@@ -11,6 +11,9 @@ body {
 header {
   background-color: #161616;
   color: white;  
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 85%), rgb(0 0 0 / 85%), rgb(0 0 0 / 58%)), url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header,main section,.container {padding: 30px 150px;}
@@ -22,7 +25,7 @@ h1 {
 }
 
 canvas,img {
-  max-width: 100%;
+  max-width: 100%;  
 }
 
 a {
@@ -37,7 +40,7 @@ button,input,textarea,select {
   outline: none;
 }
 
-button {
+button,.btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,11 +49,10 @@ button {
   color: white;
   cursor: pointer;
   text-transform: uppercase;
-  white-space: pre;
   box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
 }
 
-.lg {font-size: .9rem; padding: 20px 25px;}
+.lg {font-size: .95rem; padding: 20px 25px;}
 
 pre {
   min-height: 200px;
@@ -67,6 +69,14 @@ pre {
 header form div:first-child {
   padding: 10px;
 }
+
+form {
+  padding: 10px;
+  background-color: #d1d1d1;
+  border-radius: 7px;
+}
+
+.shadow {box-shadow: 0px 2px 7px 2px rgb(131 131 131 / 45%);}
 
 .lead {font-size: 1.2rem;}
 .center {text-align: center;}
@@ -85,11 +95,8 @@ header form div:first-child {
 
 .w-100 {width: 100%;}
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
+.grid-2 {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
+.grid-3 {display: grid;grid-template-columns: 1fr 1fr 1fr;gap: 20px;}
 
 .d-flex {display: flex;}
 .flex-wrap {flex-wrap: wrap;}

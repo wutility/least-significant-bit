@@ -14,6 +14,12 @@
     image by replacing each pixel's least significant bit with the bits of the message to be hidden.">
   <meta name="keywords" content="least significant bit,steganography,security">
   <meta name="author" content="Haikel Fazzani">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,47 +30,51 @@
     <p class="lead">Least significant bit is an image steganography technique in which messages are hidden inside an
       image by replacing each pixel's least significant bit with the bits of the message to be hidden.</p>
 
-    <form class="mb-1">
-      <div class="w-100 d-flex align-center bg-white br7 mb-3 bordered">
-        <input class="w-100" type="text" name="text" id="text" placeholder="hello world" required>
+    <input type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg, image/webp, image/avif" hidden
+      required>
 
-        <input type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg, image/webp, image/avif"
-          hidden required>
-        <button type="button" id="btn-open-input-file">Image File</button>
-      </div>
-
-      <div class="d-flex justify-center flex-wrap">
-        <button class="bg-white lg mr-1 mb-1" type="submit">encode message</button>
-        <button class="bg-white lg ml-1 mb-1" type="button" id="btn-extract">decode message</button>
-      </div>
-    </form>
+    <div class="w-100 d-flex">
+      <button type="button" class="lg mr-1" id="btn-open-input-file"><i class="fa fa-images mr-1"></i>Load
+        Image</button>
+      <a class="btn lg" href="" target="_blank"><i class="fab fa-github mr-1"></i>repository</a>
+    </div>
   </header>
 
-  <main class="grid-2 d-none">
-    <section class="grid-3 mb-3">
-      <div class="w-100 br7 center" id="image">
-        <span class="mb-1">Original</span>
+  <main class="d-none">
+    <section class="grid-2">
+      <div class="w-100 br7 center">
+        <p>Original</p>
+        <div class="br7 mb-2" id="original-image"></div>
+        <form class="mb-1">
+          <input class="w-100 bordered mb-1 br7 lg" type="text" name="text" id="text" placeholder="hello world" required>
+          <div class="d-flex">
+            <button class="mr-1 lg" type="submit">encode</button>
+            <button class="ml-1 lg" type="button" id="btn-extract">decode</button>
+          </div>
+        </form>
       </div>
 
-      <div class="center">
-        <span class="mb-1">Encoded</span>
-        <canvas class="br7" id="canvas"></canvas>
-      </div>
+      <div class="center d-none encoded">
+        <p>Encoded</p>
+        <canvas class="br7 d-none" id="canvas"></canvas>
+        <div class="br7 mb-2" id="encoded-image"></div>
 
-      <div>
-        <span>Extracted message</span>
-        <pre class="br7 mb-2 mt-1"></pre>
-        <form class="br7 bg-black" id="form-download" style="padding: 10px;">
+        <form id="form-download">
           <input class="w-100 mb-1 lg" type="text" name="filename" id="filename" placeholder="myImage" required>
           <button class="w-100 lg" type="submit">download encoded image</button>
         </form>
       </div>
     </section>
+
+    <section>
+      <span>Extracted message</span>
+      <pre class="br7 mb-2 mt-1"></pre>
+    </section>
   </main>
 
   <footer class="container center">
     <p><a href="https://www.npmjs.com/package/least-significant-bit" target="_blank">least-significant-bit</a> is
-      developed by Haikel Fazzani, under <a
+      developed by <a href="https://haikel-fazzani.deno.dev" target="_blank">Haikel Fazzani</a>, under <a
         href="https://github.com/wutility/least-significant-bit/blob/main/LICENSE.md" target="_blank">MIT
         License</a>.</p>
   </footer>
