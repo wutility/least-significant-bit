@@ -5,45 +5,81 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="assets/48.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/48.png">
   <title>Least Significant Bit</title>
+  <meta name="title" content="Least Significant Bit">
+  <meta name="description" content="Least significant bit is an image steganography technique in which messages are hidden inside an
+    image by replacing each pixel's least significant bit with the bits of the message to be hidden.">
+  <meta name="keywords" content="least significant bit,steganography,security">
+  <meta name="author" content="Haikel Fazzani">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <aside class="bg-black">
+
+  <header>
+    <h1>Steganography LSB</h1>
+    <p class="lead">Least significant bit is an image steganography technique in which messages are hidden inside an
+      image by replacing each pixel's least significant bit with the bits of the message to be hidden.</p>
+
     <form class="mb-1">
-      <div class="form-control mb-1">
-        <label for="text">Message</label>
-        <input type="text" name="text" id="text" placeholder="hello world" required>
-      </div>
-      <div class="form-control mb-1">
-        <label for="text">Image</label>
+      <div class="w-100 d-flex align-center bg-white br7 mb-3 bordered">
+        <input class="w-100" type="text" name="text" id="text" placeholder="hello world" required>
+
         <input type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg, image/webp, image/avif"
           hidden required>
         <button type="button" id="btn-open-input-file">Image File</button>
       </div>
-      <button class="w-100" type="submit">hide message</button>
+
+      <div class="d-flex justify-center flex-wrap">
+        <button class="bg-white lg mr-1 mb-1" type="submit">encode message</button>
+        <button class="bg-white lg ml-1 mb-1" type="button" id="btn-extract">decode message</button>
+      </div>
     </form>
-    <button class="w-100" type="button" id="btn-extract">extract message</button>
-  </aside>
+  </header>
 
-  <main>
-    <header class="d-flex justify-between">
-      <pre></pre>
-      <form class="d-flex" id="form-download">
-        <input type="text" name="filename" id="filename" placeholder="myImage" required>
-        <button type="submit">download</button>
-      </form>
-    </header>
+  <main class="grid-2 d-none">
+    <section class="grid-3 mb-3">
+      <div class="w-100 br7 center" id="image">
+        <span class="mb-1">Original</span>
+      </div>
 
-    <div>
-      <canvas id="canvas"></canvas>      
-    </div>
+      <div class="center">
+        <span class="mb-1">Encoded</span>
+        <canvas class="br7" id="canvas"></canvas>
+      </div>
+
+      <div>
+        <span>Extracted message</span>
+        <pre class="br7 mb-2 mt-1"></pre>
+        <form class="br7 bg-black" id="form-download" style="padding: 10px;">
+          <input class="w-100 mb-1 lg" type="text" name="filename" id="filename" placeholder="myImage" required>
+          <button class="w-100 lg" type="submit">download encoded image</button>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <script src="lib.js"></script>
-  <script src="constants.js"></script>
-  <script src="index.js" defer></script>
+  <footer class="container center">
+    <p><a href="https://www.npmjs.com/package/least-significant-bit" target="_blank">least-significant-bit</a> is
+      developed by Haikel Fazzani, under <a
+        href="https://github.com/wutility/least-significant-bit/blob/main/LICENSE.md" target="_blank">MIT
+        License</a>.</p>
+  </footer>
+
+  <script type="text/javascript" src="lib.js"></script>
+  <script type="text/javascript" src="constants.js"></script>
+  <script type="text/javascript" src="index.js" defer></script>
+
+  <script type="text/javascript" defer>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "irc1ykyv09");
+  </script>
 </body>
 
 </html>
